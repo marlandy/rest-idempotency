@@ -185,7 +185,7 @@ Body: **order** to create/update (id is not required in body. See order data typ
 Request:
 
 URL: http://MY_SERVER:SERVER_PORT/APP_CONTEXT/api/orders/999919_bd64fe278c6192c821a80ce6038effe8
-Method: POST
+Method: PUT
 Headers:
     Content-Type: application/json
     Accept: application/json
