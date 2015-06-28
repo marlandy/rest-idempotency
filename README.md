@@ -144,6 +144,28 @@ Method: **POST**
 
 Accept: **application/json**, **application/xml**
 
+**Sample**
+```java
+Request:
+
+URL: http://MY_SERVER:SERVER_PORT/APP_CONTEXT/api/orders
+Method: POST
+Headers:
+    Accept: application/json
+-------------------------------------------------------
+Response:
+
+Status: 204 NO CONTENT
+Headers:
+     Location: /APP_CONTEXT/api/orders/17000014_642d69b37201b6c79c2f19d1cc09db10
+-------------------------------------------------------
+
+* APP_CONTEXT: Application context. Default: rest-idempotency.
+* MY_SERVER: Server address. Default: localhost.
+* SERVER_PORT: Port. Default: 8080 (Tomcat).
+
+```
+
 #### UPDATE/CREATE Order
 
 URL: **/api/orders/{orderId}**
@@ -157,3 +179,39 @@ Content-Type: **application/json**, **application/xml**
 Path param: **orderId** = order identifier. E.g: /api/users/999919_bd64fe278c6192c821a80ce6038effe8
 
 Body: **order** to create/update (id is not required in body. See order data type) 
+
+**Sample**
+```java
+Request:
+
+URL: http://MY_SERVER:SERVER_PORT/APP_CONTEXT/api/orders/999919_bd64fe278c6192c821a80ce6038effe8
+Method: POST
+Headers:
+    Content-Type: application/json
+    Accept: application/json
+Body:
+    {
+       "price" : 98.05,
+       "vouncher" : "AAB09Z",
+       "status" : 1
+    }
+-------------------------------------------------------
+Response:
+
+Status: 201 CREATED
+Headers:
+     Content-Type: application/json
+Body: 
+    {
+       "id" : "999919_bd64fe278c6192c821a80ce6038effe8",
+       "price" : 98.05,
+       "vouncher" : "AAB09Z",
+       "status" : 1
+    }     
+-------------------------------------------------------
+
+* APP_CONTEXT: Application context. Default: rest-idempotency.
+* MY_SERVER: Server address. Default: localhost.
+* SERVER_PORT: Port. Default: 8080 (Tomcat).
+
+```
