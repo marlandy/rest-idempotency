@@ -55,6 +55,35 @@ Accept: **application/json**, **application/xml**
 
 Path param: **userId** = user identifier. E.g: /api/users/5001 
 
+**Sample**
+```java
+Request:
+
+URL: http://MY_SERVER:SERVER_PORT/APP_CONTEXT/api/users/5001
+Method: GET
+Headers:
+    Accept: application/json
+-------------------------------------------------------
+Response:
+
+Status: 200 OK
+Headers:
+     Content-Type: application/json
+Body:
+   {
+     "id": 5001,
+     "name": "Luis",
+     "age": 23
+   }
+     
+-------------------------------------------------------
+
+* APP_CONTEXT: Application context. Default: rest-idempotency.
+* MY_SERVER: Server address. Default: localhost.
+* SERVER_PORT: Port. Default: 8080 (Tomcat).
+
+```
+
 #### Add User
 
 URL: **/api/users**
@@ -66,6 +95,41 @@ Accept: **application/json**, **application/xml**
 Content-Type: **application/json**, **application/xml**
 
 Body: **user** to create (id is not required. See user data type) 
+
+**Sample**
+```java
+Request:
+
+URL: http://MY_SERVER:SERVER_PORT/APP_CONTEXT/api/users
+Method: POST
+Headers:
+    Accept: application/json
+    Content-Type: application/json
+Body:
+   {
+     "name": "Manuel",
+     "age": 17
+   }    
+-------------------------------------------------------
+Response:
+
+Status: 201 CREATED
+Headers:
+     Location: /APP_CONTEXT/api/users/5002
+     Content-Type: application/json
+Body:
+   {
+     "id": 5002,
+     "name": "Manuel",
+     "age": 17
+   }
+-------------------------------------------------------
+
+* APP_CONTEXT: Application context. Default: rest-idempotency.
+* MY_SERVER: Server address. Default: localhost.
+* SERVER_PORT: Port. Default: 8080 (Tomcat).
+
+```
 
 #### Update User
 
