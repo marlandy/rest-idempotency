@@ -14,7 +14,7 @@
  
 If you want to know how to use IDEMPOTENT and NON-IDEMPOTENT methods take a look at **Users** resource.
 
-Otherwise if you want to know how to use "virtual resources" you should take a look at **Orders** resource. To add new order: POST request (no changes on the system state but a new order id will be generated) and then PUT into virtual resource URL.
+Otherwise if you want to know how to use "virtual resources" you should take a look at **Orders** resource. To add new order: POST request (no changes on the system state but a <a href="https://github.com/marlandy/rest-idempotency/blob/master/src/main/java/com/autentia/tutorial/idempotency/order/service/impl/OrderKeyGeneratorImpl.java" target="_blank">new order id will be generated</a>) and then PUT into virtual resource URL.
 
 # API documentation
 
