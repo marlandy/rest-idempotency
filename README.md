@@ -1,9 +1,24 @@
 # REST and idempotency principle sample
 
+## Environment
+* JDK 1.8
+* Apache Tomcat 8.0.21
+* Apache Maven 3.1
+* H2 Embeded database
+
+## Instructions
+* **mvn clean install** in ${PROJECT_HOME} folder (where pom.xml file is)
+* copy target/rest-idempotency.war file into ${APACHE_TOMCAT_HOME}/webapps/ folder
+* start Apache Tomcat
+* http://localhost:8080/rest-idempotency (index.html page)
+ 
+If you want to know how to use IDEMPOTENT and NON-IDEMPOTENT methods take a look at **Users** resource.
+
+Otherwise if you want to know how to use "virtual resources" you should take a look at **Orders** resource. To add new order: POST request (no changes on the system state but a new order id will be generated) and then PUT into virtual resource URL.
 
 # API documentation
 
-## Users
+## Users
 
 ### Data types
 
