@@ -80,4 +80,80 @@ Content-Type: **application/json**, **application/xml**
 Path param: **userId** = user identifier. E.g: /api/users/5001 
 
 Body: **user** to update (id is not required in body. See user data type) 
+
+## Orders
+
+### Data types
+
+#### Order
+
+**application/json**
+
+```javascript
+{
+  "id": "999919_bd64fe278c6192c821a80ce6038effe8",
+  "price": 6.98,
+  "vouncher": "KKFEV3",
+  "status" : 2
+}
+ ```
  
+**application/xml**
+
+```xml
+<order>
+  <id>999919_bd64fe278c6192c821a80ce6038effe8</id>
+  <price>6.98</price>
+  <vouncher>KKFEV3</vouncher>
+  <status>2</status>
+</order>
+ ```
+ 
+| Field        | Type           | Required | Description  |
+| ------------- |:-------------:|:-------------:| -----|
+| id      | string | true | Order identifier. E.g: 999919_bd64fe278c6192c821a80ce6038effe8 |
+| price     | double | true | Order price. E.g: 83.24 |
+| vouncher     | int | true | A vouncher code associated to the order. E.g: VC705R |
+| status     | int | true | Order status. It must be: 1 (CREATED), 2 (FINISHED) or 3 (CANCELED). E.g: 2 |
+
+### Resources
+
+#### GET Orders
+
+URL: **/api/orders**
+
+Method: **GET**
+
+Accept: **application/json**, **application/xml**
+ 
+#### GET Orders
+
+URL: **/api/orders/{orderId}**
+
+Method: **GET**
+
+Accept: **application/json**, **application/xml**
+
+Path param: **orderId** = order identifier. E.g: /api/users/999919_bd64fe278c6192c821a80ce6038effe8
+
+#### CREATE "Virtual" Order
+
+URL: **/api/orders**
+
+Method: **POST**
+
+Accept: **application/json**, **application/xml**
+
+#### UPDATE/CREATE Order
+
+URL: **/api/orders/{orderId}**
+
+Method: **PUT**
+
+Accept: **application/json**, **application/xml**
+
+Content-Type: **application/json**, **application/xml**
+
+Path param: **orderId** = order identifier. E.g: /api/users/999919_bd64fe278c6192c821a80ce6038effe8
+
+Body: **order** to create/update (id is not required in body. See order data type) 
