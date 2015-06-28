@@ -8,9 +8,13 @@
 
 ## Instructions
 * **mvn clean install** in ${PROJECT_HOME} folder (where pom.xml file is)
-* copy target/rest-idempotency.war file into ${APACHE_TOMCAT_HOME}/webapps/ folder
-* start Apache Tomcat
-* http://localhost:8080/rest-idempotency (index.html page)
+* To start embeded Tomcat:
+  * Run **mvn tomcat7:run**
+  * http://localhost:8080/rest-idempotency (index.html page)
+* To manually deploy on your server
+  * copy target/rest-idempotency.war file into ${APACHE_TOMCAT_HOME}/webapps/ folder
+  * start Apache Tomcat
+  * http://localhost:8080/rest-idempotency (index.html page)
  
 If you want to know how to use IDEMPOTENT and NON-IDEMPOTENT methods take a look at **Users** resource.
 
