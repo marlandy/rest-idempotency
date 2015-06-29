@@ -20,6 +20,10 @@ If you want to know how to use IDEMPOTENT and NON-IDEMPOTENT methods take a look
 
 Otherwise if you want to know how to use "virtual resources" you should take a look at **Orders** resource. To add new order: POST request (no changes on the system state but a <a href="https://github.com/marlandy/rest-idempotency/blob/master/src/main/java/com/autentia/tutorial/idempotency/order/service/impl/OrderKeyGeneratorImpl.java" target="_blank">new order id will be generated</a>) and then PUT into virtual resource URL.
 
+## Tutorial
+
+<a href="http://t.co/6yNAiOwQJs" target="_blank">REST y el principio de idempotencia</a> (Spanish)
+
 # API documentation
 
 ## Users
