@@ -191,7 +191,7 @@ FORMAT: 1A
     + name (string)
 
 + Parameters
-    + id : 5000 (int)
+    + id : 5000 (number)
 
 ### Get existing user [GET]
 + Request
@@ -205,7 +205,7 @@ FORMAT: 1A
 
 ### Get unexisting user [GET]
 + Parameters
-    + id : 0 (int)
+    + id : 0 (number)
 
 + Request
     + Headers
