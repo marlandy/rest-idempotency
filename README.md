@@ -26,6 +26,8 @@ Otherwise if you want to know how to use "virtual resources" you should take a l
 
 # API documentation
 
+You can see <a href="https://github.com/marlandy/rest-idempotency/blob/master/src/main/webapp/API_DOCUMENTATION.md" target="_blank">apiblueprint documentation here</a>
+
 ## Users
 
 ### Data types
