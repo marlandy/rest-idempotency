@@ -25,9 +25,10 @@ FORMAT: 1A
 
 ### Get orders [GET]
 + Request
+    
     + Headers
         
-        Accept: application/json
+            Accept: application/json
 
 + Response 200 (application/json;charset=UTF-8) 
     
@@ -37,11 +38,13 @@ FORMAT: 1A
 + Request
     + Headers
         
-        Accept: application/json
+            Accept: application/json
 
 + Response 204
+    
     + Headers
-        Location: /context/api/orders/12346_newvirtualorderid
+            
+            Location: /context/api/orders/12346_newvirtualorderid
 
 
 ## Order [/api/orders/{id}]
@@ -60,9 +63,10 @@ FORMAT: 1A
 
 ### Get existing order [GET]
 + Request
+    
     + Headers
         
-        Accept: application/json
+            Accept: application/json
 
 + Response 200 (application/json;charset=UTF-8) 
     
@@ -73,25 +77,28 @@ FORMAT: 1A
     + id : 00000_bd84fe278c6152c821a80ee6038effe6 (string)
 
 + Request
+    
     + Headers
         
-        Accept: application/json
+            Accept: application/json
 
 + Response 404
 
 
 ### Update order [PUT]
 + Request
+    
     + Headers
-        Content-Type: application/json
-        Accept: application/json
+            
+            Content-Type: application/json
+            Accept: application/json
     
     + Body
-        {
-            "price" : 33.1,
-            "vouncher" : "ACC092",
-            "status" : 1
-        }
+            {
+                "price" : 33.1,
+                "vouncher" : "ACC092",
+                "status" : 1
+            }
 
 + Response 200 (application/json;charset=UTF-8) 
     
@@ -102,21 +109,25 @@ FORMAT: 1A
     + id : 0098789_ff31 (string) 
 
 + Request
+
     + Headers
-        Content-Type: application/json
-        Accept: application/json
+
+            Content-Type: application/json
+            Accept: application/json
     
     + Body
-        {
-            "price" : 33.1,
-            "vouncher" : "ACC092",
-            "status" : 1
-        }
+            
+            {
+                "price" : 33.1,
+                "vouncher" : "ACC092",
+                "status" : 1
+            }
 
 + Response 400 (application/json;charset=UTF-8) 
-    {
-        "cause": "Order id 0098789_ff31 is invalid"
-    }
+        
+        {
+            "cause": "Order id 0098789_ff31 is invalid"
+        }
 
 # Users API
 
@@ -157,10 +168,12 @@ FORMAT: 1A
         Content-Type: application/json
 
     + Body
+        ```js
         {
             "age" : 25,
             "name" : "David"
         }
+        ```
 
 + Response 201 (application/json;charset=UTF-8) 
     + Headers
@@ -223,7 +236,8 @@ FORMAT: 1A
         }
 
 + Response 400 (application/json;charset=UTF-8) 
+    ```js
     {
         "cause": "User age is required"
     }
-    
+    ```
