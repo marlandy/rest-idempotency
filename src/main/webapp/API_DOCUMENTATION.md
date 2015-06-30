@@ -94,6 +94,7 @@ FORMAT: 1A
             Accept: application/json
     
     + Body
+
             {
                 "price" : 33.1,
                 "vouncher" : "ACC092",
@@ -116,7 +117,7 @@ FORMAT: 1A
             Accept: application/json
     
     + Body
-            
+        
             {
                 "price" : 33.1,
                 "vouncher" : "ACC092",
@@ -154,7 +155,7 @@ FORMAT: 1A
 + Request
     + Headers
         
-        Accept: application/json
+            Accept: application/json
 
 + Response 200 (application/json;charset=UTF-8) 
     
@@ -164,20 +165,21 @@ FORMAT: 1A
 + Request
     + Headers
         
-        Accept: application/json
-        Content-Type: application/json
+            Accept: application/json
+            Content-Type: application/json
 
     + Body
-        ```js
-        {
-            "age" : 25,
-            "name" : "David"
-        }
-        ```
+
+            {
+                "age" : 25,
+                "name" : "David"
+            }
+        
 
 + Response 201 (application/json;charset=UTF-8) 
     + Headers
-        Location: /appctx/api/users/123
+
+            Location: /appctx/api/users/123
 
     + Attributes(User)
 
@@ -193,8 +195,9 @@ FORMAT: 1A
 
 ### Get existing user [GET]
 + Request
-    + Headers        
-        Accept: application/json
+    + Headers
+        
+            Accept: application/json
 
 + Response 200 (application/json;charset=UTF-8) 
     
@@ -205,21 +208,25 @@ FORMAT: 1A
     + id : 0 (int)
 
 + Request
-    + Headers        
-        Accept: application/json
+    + Headers
+        
+            Accept: application/json
 
 + Response 404
 
 ### Update existing user [PUT]
 + Request
     + Headers        
-        Accept: application/json
-        Content-Type: application/json
+
+            Accept: application/json
+            Content-Type: application/json
+
     + Body
-        {
-            "age" : 57,
-            "name" : "Victor"
-        }
+
+            {
+                "age" : 57,
+                "name" : "Victor"
+            }
 
 + Response 200 (application/json;charset=UTF-8) 
     
@@ -228,16 +235,19 @@ FORMAT: 1A
 ### Update existing user [PUT]
 + Request
     + Headers        
-        Accept: application/json
-        Content-Type: application/json
+
+            Accept: application/json
+            Content-Type: application/json
+
     + Body
-        {            
-            "name" : "Victor"
-        }
+
+            {            
+                "name" : "Victor"
+            }
 
 + Response 400 (application/json;charset=UTF-8) 
-    ```js
-    {
-        "cause": "User age is required"
-    }
-    ```
+    
+        {
+            "cause": "User age is required"
+        }
+   
