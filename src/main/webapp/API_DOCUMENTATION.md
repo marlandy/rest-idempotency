@@ -186,9 +186,9 @@ FORMAT: 1A
 ## User [/api/users/{id}]    
 
 + Attributes (object)
-        + id (number)
-        + age (number)
-        + name (string)
+    + id (number)
+    + age (number)
+    + name (string)
 
 + Parameters
     + id : 5000 (int)
