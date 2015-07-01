@@ -2,6 +2,8 @@ FORMAT: 1A
 
 # Orders API
 
+API to manage orders
+
 ## Orders [/api/orders]
 Resource representing collection of orders
 
