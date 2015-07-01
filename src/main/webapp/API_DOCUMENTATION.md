@@ -38,7 +38,7 @@ Resource representing collection of orders
 Resource representing an order
 
 + Parameters
-    + id : 999992_bd84fe278c6152c821a80ee6038effe6 (string)
+    + id : 999992_bd84fe278c6152c821a80ee6038effe6 (string, required)
 
 + Attributes (object)
     + id: bd84fe278c6152c821a80ee6038effe6 (string)
@@ -60,7 +60,7 @@ Resource representing an order
 
 ### Get unexisting order [GET]
 + Parameters
-    + id : 00000_bd84fe278c6152c821a80ee6038effe6 (string)
+    + id : 00000_bd84fe278c6152c821a80ee6038effe6 (string, required)
 
 + Request
     
@@ -93,7 +93,7 @@ Resource representing an order
 
 ### Update invalid order id [PUT]
 + Parameters
-    + id : 0098789_ff31 (string) 
+    + id : 0098789_ff31 (string, required) 
 
 + Request
 
@@ -165,7 +165,7 @@ Resource representing an user
     + name (string)
 
 + Parameters
-    + id : 5000 (number)
+    + id : 5000 (number, required)
 
 ### Get existing user [GET]
 + Request
@@ -179,7 +179,7 @@ Resource representing an user
 
 ### Get unexisting user [GET]
 + Parameters
-    + id : 0 (number)
+    + id : 0 (number, required)
 
 + Request
     + Headers
