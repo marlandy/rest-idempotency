@@ -52,14 +52,12 @@ FORMAT: 1A
 + Parameters
     + id : 999992_bd84fe278c6152c821a80ee6038effe6 (string)
 
-+ Model
-    
-        {
-            "id": "1200047_4665ffacd",
-            "price": 1.17,
-            "vouncher": "AFFC091H",
-            "status": 1
-        }
++ Attributes (object)
+    + id (string)
+    + price (number)
+    + vouncher (string) 
+    + status (number) - Order status. It must be 1 (CREATED), 2 (FINISHED) or 3 (CANCELED)
+
 
 ### Get existing order [GET]
 + Request
@@ -70,7 +68,7 @@ FORMAT: 1A
 
 + Response 200 (application/json;charset=UTF-8) 
     
-    [Order][]
+    + Attributes(Order)
 
 ### Get unexisting order [GET]
 + Parameters
@@ -103,7 +101,7 @@ FORMAT: 1A
 
 + Response 200 (application/json;charset=UTF-8) 
     
-    [Order][]
+    + Attributes(Order)
 
 ### Update invalid order id [PUT]
 + Parameters
