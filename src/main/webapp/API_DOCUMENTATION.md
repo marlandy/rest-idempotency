@@ -3,6 +3,7 @@ FORMAT: 1A
 # Orders API
 
 ## Orders [/api/orders]
+Resource representing collection of orders
 
 + Attributes (object)
     + orders (array[Order])
@@ -32,6 +33,7 @@ FORMAT: 1A
 
 
 ## Order [/api/orders/{id}]
+Resource representing an order
 
 + Parameters
     + id : 999992_bd84fe278c6152c821a80ee6038effe6 (string)
@@ -115,6 +117,7 @@ FORMAT: 1A
 # Users API
 
 ## Users [/api/users]
+Resource representing a collection of users
 
 + Attributes
     + users(array[User])
@@ -151,7 +154,8 @@ FORMAT: 1A
 
     + Attributes(User)
 
-## User [/api/users/{id}]    
+## User [/api/users/{id}]
+Resource representing an user
 
 + Attributes (object)
     + id (number)
