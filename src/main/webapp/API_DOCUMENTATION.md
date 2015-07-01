@@ -4,24 +4,8 @@ FORMAT: 1A
 
 ## Orders [/api/orders]
 
-+ Model
-    
-        {
-            "orders": [
-                {
-                    "id": "1200047_4665ffaee",
-                    "price": 1.17,
-                    "vouncher": "AFFC091H",
-                    "status": 1
-                },
-                {
-                    "id": "1200054_4665cce10",
-                    "price": 2.77,
-                    "vouncher": "CBAC091H",
-                    "status": 3
-                }
-            ]            
-        }
++ Attributes (object)
+    + orders (array[Order])
 
 ### Get orders [GET]
 + Request
@@ -32,7 +16,7 @@ FORMAT: 1A
 
 + Response 200 (application/json;charset=UTF-8) 
     
-    [Orders][]
+    + Attribute(Orders)
 
 ### Create "virtual" order [POST]
 + Request
@@ -53,10 +37,10 @@ FORMAT: 1A
     + id : 999992_bd84fe278c6152c821a80ee6038effe6 (string)
 
 + Attributes (object)
-    + id (string)
-    + price (number)
-    + vouncher (string) 
-    + status (number) - Order status. It must be 1 (CREATED), 2 (FINISHED) or 3 (CANCELED)
+    + id: bd84fe278c6152c821a80ee6038effe6 (string)
+    + price: 2.77 (number)
+    + vouncher: ACR0347Z (string) 
+    + status: 1 (number) - Order status. It must be 1 (CREATED), 2 (FINISHED) or 3 (CANCELED)
 
 
 ### Get existing order [GET]
@@ -132,22 +116,8 @@ FORMAT: 1A
 
 ## Users [/api/users]
 
-+ Model
-    
-        {
-            "users": [
-                {
-                    "id": 1,
-                    "age": 17,
-                    "name": "Juan"
-                },
-                {
-                    "id": 8,
-                    "age": 42,
-                    "name": "Pepe"
-                }
-            ]            
-        }
++ Attributes
+    + users(array[User])
 
 ### Get all users [GET]
 + Request
@@ -157,7 +127,7 @@ FORMAT: 1A
 
 + Response 200 (application/json;charset=UTF-8) 
     
-    [Users][]
+    + Attributes(Users)
 
 ### Create user [POST]
 + Request
