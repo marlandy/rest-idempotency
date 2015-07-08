@@ -39,7 +39,7 @@ public class OrderDaoTest {
         final Order order = orderDao.getById(existingOrderId);
         assertNotNull(order);
         assertEquals(38.58, order.getPrice(), 0);
-        assertEquals("AZX33F", order.getVouncher());
+        assertEquals("AZX33F", order.getVoucher());
     }
 
     @Test
@@ -62,40 +62,40 @@ public class OrderDaoTest {
     public void shouldCreateANewOrder() {
         String id = "222222_bd84fe278c6152c821a80ee6038effe6";
         double price = 12.89;
-        String vouncher = "AFRO22";
+        String voucher = "AFRO22";
         int status = Order.FINISHED;
-        createOrder(id, price, vouncher, status);
+        createOrder(id, price, voucher, status);
         final Order orderFromDB = orderDao.getById(id);
         assertNotNull(orderFromDB);
         assertEquals(id, orderFromDB.getId());
         assertEquals(price, orderFromDB.getPrice(), 0);
-        assertEquals(vouncher, orderFromDB.getVouncher());
+        assertEquals(voucher, orderFromDB.getVoucher());
         assertEquals(Order.FINISHED, orderFromDB.getStatus());
     }
 
     @Test
     public void shouldUpdateAnOrder() {
         String id = "3333333_bd84fe278c6152c821a80ee6038effe6";
-        createOrder(id, 16.09, "VOUNCHER", Order.CREATED);
+        createOrder(id, 16.09, "VOUCHER", Order.CREATED);
         final Order orderToUpDate = new Order();
         orderToUpDate.setId(id);
         orderToUpDate.setPrice(99.78);
-        orderToUpDate.setVouncher("ANOTHER_VOUNCHER");
+        orderToUpDate.setVoucher("ANOTHER_VOUCHER");
         orderToUpDate.setStatus(Order.CANCELED);
         orderDao.update(orderToUpDate);
         final Order orderFromDB = orderDao.getById(id);
         assertNotNull(orderFromDB);
         assertEquals(orderFromDB.getId(), orderToUpDate.getId());
         assertEquals(orderFromDB.getPrice(), orderToUpDate.getPrice(), 0);
-        assertEquals(orderFromDB.getVouncher(), orderToUpDate.getVouncher());
+        assertEquals(orderFromDB.getVoucher(), orderToUpDate.getVoucher());
         assertEquals(Order.CANCELED, orderToUpDate.getStatus());
     }
 
-    private void createOrder(String id, double price, String vouncher, int status) {
+    private void createOrder(String id, double price, String voucher, int status) {
         final Order order = new Order();
         order.setId(id);
         order.setPrice(price);
-        order.setVouncher(vouncher);
+        order.setVoucher(voucher);
         order.setStatus(status);
         orderDao.insert(order);
     }

@@ -61,7 +61,7 @@ public class OrderServiceImpl implements OrderService {
         ValidationUtil.validateRequired(order, "Order");
         ValidationUtil.validateRequired(order.getId(), "Order id");
         ValidationUtil.validateRequired(order.getPrice(), "Order price");
-        ValidationUtil.validateRequired(order.getVouncher(), "Order vouncher");
+        ValidationUtil.validateRequired(order.getVoucher(), "Order voucher");
         validateOrderStatus(order.getStatus());
     }
 

@@ -57,12 +57,12 @@ public class OrderServiceTest {
     }
 
     @Test
-    public void shouldVerifyThatVouncherIsNotNull() {
+    public void shouldVerifyThatVoucherIsNotNull() {
         try {
             orderService.create(createOrder("1000_1234567890abcdef", new Double(2), null, Order.CANCELED));
             fail("Should fail because order price is null");
         } catch (InvalidDataException ide) {
-            assertEquals("Order vouncher is required", ide.getMessage());
+            assertEquals("Order voucher is required", ide.getMessage());
         }
     }
 
@@ -133,11 +133,11 @@ public class OrderServiceTest {
         verify(mockedOrderDao, times(1)).update(existingOrder);
     }
 
-    private Order createOrder(String id, Double price, String vouncher, Integer status) {
+    private Order createOrder(String id, Double price, String voucher, Integer status) {
         final Order order = new Order();
         order.setId(id);
         order.setPrice(price);
-        order.setVouncher(vouncher);
+        order.setVoucher(voucher);
         order.setStatus(status);
         return order;
     }

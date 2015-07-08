@@ -69,7 +69,7 @@ public class OrderJdbcDao implements OrderDao {
     @Override
     public void insert(final Order order) {
         LOG.trace("Creating order {}", order);
-        final String sql = "insert into orders (id, price, vouncher, status) values (?, ?, ?, ?)";
+        final String sql = "insert into orders (id, price, voucher, status) values (?, ?, ?, ?)";
         jdbcTemplate.update(new PreparedStatementCreator() {
 
             @Override
@@ -78,7 +78,7 @@ public class OrderJdbcDao implements OrderDao {
                 final PreparedStatement ps = connection.prepareStatement(sql);
                 ps.setString(1, order.getId());
                 ps.setDouble(2, order.getPrice());
-                ps.setString(3, order.getVouncher());
+                ps.setString(3, order.getVoucher());
                 ps.setInt(4, order.getStatus());
                 return ps;
             }
@@ -93,7 +93,7 @@ public class OrderJdbcDao implements OrderDao {
             throw new InvalidDataException("Order with id " + order.getId() + " doesn't exist");
         }
 
-        final String sql = "update orders set price = ?, vouncher = ?, status = ? where id = ?";
+        final String sql = "update orders set price = ?, voucher = ?, status = ? where id = ?";
         jdbcTemplate.update(new PreparedStatementCreator() {
 
             @Override
@@ -101,7 +101,7 @@ public class OrderJdbcDao implements OrderDao {
                     throws SQLException {
                 final PreparedStatement ps = connection.prepareStatement(sql);
                 ps.setDouble(1, order.getPrice());
-                ps.setString(2, order.getVouncher());
+                ps.setString(2, order.getVoucher());
                 ps.setInt(3, order.getStatus());
                 ps.setString(4, order.getId());
                 return ps;

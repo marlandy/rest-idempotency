@@ -10,7 +10,7 @@ import org.apache.commons.lang.builder.HashCodeBuilder;
  * @author marlandy
  */
 @XmlRootElement
-@XmlType(propOrder = {"id", "price", "vouncher", "status"})
+@XmlType(propOrder = {"id", "price", "voucher", "status"})
 public class Order {
 
     public static final Integer CREATED = 1;
@@ -23,7 +23,7 @@ public class Order {
 
     private Double price;
 
-    private String vouncher;
+    private String voucher;
 
     private Integer status;
 
@@ -43,12 +43,12 @@ public class Order {
         this.price = price;
     }
 
-    public String getVouncher() {
-        return vouncher;
+    public String getVoucher() {
+        return voucher;
     }
 
-    public void setVouncher(String vouncher) {
-        this.vouncher = vouncher;
+    public void setVoucher(String voucher) {
+        this.voucher = voucher;
     }
 
     public Integer getStatus() {
@@ -80,7 +80,7 @@ public class Order {
 
     @Override
     public String toString() {
-        return "Order{" + "id=" + id + ", price=" + price + ", vouncher=" + vouncher + ", status=" + status + '}';
+        return "Order{" + "id=" + id + ", price=" + price + ", voucher=" + voucher + ", status=" + status + '}';
     }
 
 }

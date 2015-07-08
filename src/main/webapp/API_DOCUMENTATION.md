@@ -43,7 +43,7 @@ Resource representing an order
 + Attributes (object)
     + id: bd84fe278c6152c821a80ee6038effe6 (string)
     + price: 2.77 (number)
-    + vouncher: ACR0347Z (string) 
+    + voucher: ACR0347Z (string) 
     + status: 1 (number) - Order status. It must be 1 (CREATED), 2 (FINISHED) or 3 (CANCELED)
 
 
@@ -83,7 +83,7 @@ Resource representing an order
 
             {
                 "price" : 33.1,
-                "vouncher" : "ACC092",
+                "voucher" : "ACC092",
                 "status" : 1
             }
 
@@ -106,7 +106,7 @@ Resource representing an order
         
             {
                 "price" : 33.1,
-                "vouncher" : "ACC092",
+                "voucher" : "ACC092",
                 "status" : 1
             }
 

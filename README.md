@@ -182,7 +182,7 @@ Body: **user** to update (id is not required in body. See user data type)
 {
   "id": "999919_bd64fe278c6192c821a80ce6038effe8",
   "price": 6.98,
-  "vouncher": "KKFEV3",
+  "voucher": "KKFEV3",
   "status" : 2
 }
  ```
@@ -193,7 +193,7 @@ Body: **user** to update (id is not required in body. See user data type)
 <order>
   <id>999919_bd64fe278c6192c821a80ce6038effe8</id>
   <price>6.98</price>
-  <vouncher>KKFEV3</vouncher>
+  <voucher>KKFEV3</voucher>
   <status>2</status>
 </order>
  ```
@@ -202,7 +202,7 @@ Body: **user** to update (id is not required in body. See user data type)
 | ------------- |:-------------:|:-------------:| -----|
 | id      | string | true | Order identifier. E.g: 999919_bd64fe278c6192c821a80ce6038effe8 |
 | price     | double | true | Order price. E.g: 83.24 |
-| vouncher     | int | true | A vouncher code associated to the order. E.g: VC705R |
+| voucher     | int | true | A voucher code associated to the order. E.g: VC705R |
 | status     | int | true | Order status. It must be: 1 (CREATED), 2 (FINISHED) or 3 (CANCELED). E.g: 2 |
 
 ### Resources
@@ -281,7 +281,7 @@ Headers:
 Body:
     {
        "price" : 98.05,
-       "vouncher" : "AAB09Z",
+       "voucher" : "AAB09Z",
        "status" : 1
     }
 -------------------------------------------------------
@@ -294,7 +294,7 @@ Body:
     {
        "id" : "999919_bd64fe278c6192c821a80ce6038effe8",
        "price" : 98.05,
-       "vouncher" : "AAB09Z",
+       "voucher" : "AAB09Z",
        "status" : 1
     }     
 -------------------------------------------------------
